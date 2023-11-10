@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: style none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    /* Adjust the ratio as needed */
+    grid-template-rows: auto 1fr 100px;
+    /* First row for header, second row for main content */
+    height: 100vh;
+    /* Sets the grid to take full height of the viewport */
+}
+
+.header {
+    grid-column: 2 / 3;
+    /* Start from the first column */
+    grid-row: 1 / 2;
+    /* First row */
+    background-color: #A7745D;
+    padding: 30px;
+}
+.header nav a{
+    margin-left: 50px;
+    color: #03396c;
+    font-weight: bold;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    /* First column */
+    grid-row: 1 / 3;
+    /* Spans from first row to the end of the second row */
+    /* Additional sidebar styling */
+
+    background-color: #DCCCBB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+
+.sidebar .Logo {
+    margin-bottom: 20px;
+    /* Add margin at the bottom of the logo */
+}
+
+.sidebar ul li:first-child {
+    margin-top: 100px;
+    /* Add margin at the top of the first menu category item */
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 10px;
+    /* Adjust the space between list items */
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.sidebar ul li i {
+    width: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+.sidebar ul li a {
+    display: block;
+    color:  #03396c;
+    font-weight: bold;
+}
+
+.main-content {
+    grid-column: 2 / 3;
+    /* Second column */
+    grid-row: 2 / 3;
+    /* Second row */
+    /* Additional main content styling */
+}
+
+.footer {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    background-color: #EAB464;
+}
